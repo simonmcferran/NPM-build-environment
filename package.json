@@ -1,0 +1,43 @@
+{
+  "name": "oroson-prototype",
+  "version": "0.0.0",
+  "description": "Prototype Taggin interactions",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Simon McFerran",
+      "email": "simonmcferran@hotmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Simon McFerran",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "express": "^4.14.1",
+    "foundation-cli": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "serve-static": "^1.11.2",
+    "foundation-sites": "6.2.3"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run copy && npm run sass",
+    "clean": "rm -rf demo",
+    "copy": "npm run copy:html & npm run copy:svgs & npm run copy:roboto & npm run copy:roboto_Css & npm run copy:icons & npm run copy:icons_Css & npm run copy:js & npm run copy:img",
+    "copy:html": "copyfiles -f dev/*.html demo",
+    "copy:js": "copyfiles -f dev/js/*.js demo/assets/js",
+    "copy:img": "copyfiles -f dev/img/* demo/assets/img",
+    "copy:svgs": "copyfiles -f SVG/* demo/assets/img/SVG",
+    "copy:roboto": "copyfiles -f node_modules/roboto-fontface/fonts/Roboto/* demo/assets/fonts/Roboto",
+    "copy:icons": "copyfiles -f node_modules/rapid7-icon-font/fonts/* demo/assets/fonts/css/fonts",
+    "copy:roboto_Css": "copyfiles -f node_modules/roboto-fontface/css/roboto/roboto-fontface.css demo/assets/fonts/css/roboto",
+    "copy:icons_Css": "copyfiles -f node_modules/rapid7-icon-font/css/rapid7.css demo/assets/fonts/css/rapid7-icon-font",
+    "sass": "node-sass dev/scss/ --include-path node_modules/foundation-sites/scss/ --include-path node_modules/rapid7-styles/styles/scss/ -o demo/assets/css  ",
+    "start": "npm run build && node server",
+    "dev": "npm run start"
+  }
+}
