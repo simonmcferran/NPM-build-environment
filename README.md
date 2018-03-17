@@ -17,7 +17,7 @@ npm install
 
 #### Build
 
-The build script will build the demo HTML pages that can be used to view all the variations of the logos available.
+The build script will build the demo HTML pages.
 
 ```
 npm run build

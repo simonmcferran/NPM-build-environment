@@ -1,7 +1,7 @@
 {
-  "name": "oroson-prototype",
+  "name": "NPM-build-environment",
   "version": "0.0.0",
-  "description": "Prototype Taggin interactions",
+  "description": "Basic HTML build using NPM as a build tool",
   "main": "index.js",
   "contributors": [
     {
