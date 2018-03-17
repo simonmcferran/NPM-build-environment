@@ -5,3 +5,4 @@ styleguide
 .sass-cache/
 **/package-lock.json
 lib/
+demo/
