@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import "theme/index";
+@import "modules/index";
+
 body {
-  background: red;
-  colour:white;
+  background: palette(white);
+  color:palette(black);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
 }
+
+
+

@@ -1,0 +1,129 @@
+header {
+  background-color: palette(black);
+  width: 100%;
+  text-transform: uppercase;
+
+  .header-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 55px;
+    padding: 0 15px;
+    .site-nav {
+      flex: 1 0 0px;
+      margin-right: auto;
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          &:not(:last-child) {
+            padding-right: 15px;
+          }
+          &:not(:first-child) {
+            padding-left: 15px;
+          }
+          a {
+            padding: 5px 0;
+            color: palette(grey);
+            transition: color 0.3s ease-in-out 0s;
+            text-decoration: none;
+            position: relative;
+            font-size: 0.8rem;
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              background-color: palette(grey);
+              visibility: hidden;
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+              -webkit-transition: all 0.3s ease-in-out 0s;
+              transition: all 0.3s ease-in-out 0s;
+            }
+            &:hover {
+              color: palette(light-grey);
+
+              &:before {
+                background-color: palette(light-grey);
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      align-self: flex-start;
+      .bf-logo img {
+        width: 55px;
+      }
+    }
+    .icon-nav {
+      margin-left: auto;
+      flex: 1 0 0px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        li {
+          &:not(:last-child) {
+            padding-right: 10px;
+          }
+          &:not(:first-child) {
+            padding-left: 10px;
+          }
+          a {
+            padding: 5px 0;
+            color: palette(white);
+            transition: color 0.3s ease-in-out 0s;
+            text-decoration: none;
+            font-size: 0.8rem;
+          }
+          i {
+            font-size: 1.1rem;
+          }
+          &.my-account {
+            border-right: 1px solid palette(grey);
+            margin-right: 15px;
+            a {
+              color: palette(red);
+            }
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 200px;
+
+  .bf-logo {
+    background-color: palette(red);
+    width: 170px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 7px 7px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+  }
+}

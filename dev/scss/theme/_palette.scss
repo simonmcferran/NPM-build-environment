@@ -1,0 +1,13 @@
+$palettes: (
+        white: #ffffff,
+        red: #ec1c24,
+        light-grey: #f2f2f2,
+        grey: #999999,
+        black: #1a1a1a
+);
+
+@function palette($palette) {
+  @return map-get($palettes, $palette)
+}
+
+
